@@ -5,4 +5,5 @@ urlpatterns = [
     path('',views.index,name="home"),
     path('product/',views.Productform,name="product"),
     path('ajax/load_subcat/', views.load_subcat, name='ajax_load_subcat'),
+    # path('product/<int:pk>',views.addImage,name="addImage"),
 ]

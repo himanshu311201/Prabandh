@@ -20,8 +20,10 @@ def load_subcat(request):
     subcategory = Subcategory.objects.filter(Categories=category_id).all()
     print(subcategory)
     return render(request, 'Rent/subcat.html', {'subcat': subcategory})
+
 def show(request):
     return render(request, 'Rent/booking.html')
+
 def Productform(request):
     if request.method=='POST' :
         form=ProductForm(request.POST,request.FILES)
@@ -39,3 +41,6 @@ def Productform(request):
     else:
         form=ProductForm()
     return render(request,'Rent/Product.html',{'form':ProductForm})
+
+# def addImage(request):
+#     return render(request,'Rent/ProdView.html')
