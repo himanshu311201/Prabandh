@@ -56,6 +56,13 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
+WEBPUSH_SETTINGS = {
+    "VAPID_PUBLIC_KEY": "Vapid Public Key",
+    "VAPID_PRIVATE_KEY": "Vapid Private Key",
+    "VAPID_ADMIN_EMAIL": "admin@example.com"
+}
+
 ROOT_URLCONF = 'Prabandh.urls'
 
 TEMPLATES = [
@@ -163,10 +170,45 @@ PWA_APP_SCOPE = '/'
 PWA_APP_ORIENTATION = 'any'
 PWA_APP_START_URL = '/'
 PWA_APP_STATUS_BAR_COLOR = 'default'
-PWA_APP_ICONS = [{'src': '/static/images/my_app_icon.png', 'sizes': '160x160'}]
+PWA_APP_ICONS = [{
+    "src": '/static/images/icons/icon.png',
+    "type": "image/png",
+    "sizes": "48x48"
+},
+    {
+    "src": '/static/images/icons/icon.png',
+    "type": "image/png",
+    "sizes": "96x96"
+},
+    {
+    "src": '/static/images/icons/icon.png',
+    "sizes": "128x128",
+    "type": "image/png"
+},
+    {
+    "src": '/static/images/icons/icon.png',
+    "sizes": "144x144",
+    "type": "image/png"
+},
+    {
+    "src": '/static/images/icons/icon.png',
+    "type": "image/png",
+    "sizes": "192x192"
+},
+    {
+    "src": '/static/images/icons/icon.png',
+    "type": "image/png",
+    "sizes": "256x256",
+    "purpose": "any maskable"
+},
+    {
+    "src": '/static/images/icons/icon.png',
+    "type": "image/png",
+    "sizes": "512x512"
+}, ]
 PWA_APP_ICONS_APPLE = [
     {'src': '/static/images/my_app_icon.png', 'sizes': '160x160'}]
-PWA_APP_SPLASH_SCREEN = [{'src': '/static/images/icons/splash-640x1136.png',
+PWA_APP_SPLASH_SCREEN = [{'src': '/static/images/icons/happiness.png',
                           'media': '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)'}]
 PWA_APP_DIR = 'ltr'
 PWA_APP_LANG = 'en-US'
