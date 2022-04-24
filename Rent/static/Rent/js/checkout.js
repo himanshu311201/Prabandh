@@ -43,7 +43,7 @@ async function handleSubmit(e) {
     elements,
     confirmParams: {
       // Make sure to change this to your payment completion page
-      return_url: "{% url 'success' %}",
+      return_url: "http://localhost:8000/success",
     },
   });
 
@@ -68,9 +68,10 @@ async function checkStatus() {
   );
 
   if (!clientSecret) {
+  console.log("hee")
     return;
   }
-
+  console.log("naa")
   const { paymentIntent } = await stripe.retrievePaymentIntent(clientSecret);
 
   switch (paymentIntent.status) {
